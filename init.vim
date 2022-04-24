@@ -26,6 +26,12 @@ Plug 'maximbaz/lightline-ale'
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 
+" Javascript | React js
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+
+" Install coc for prettier and autocomplete
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " IDE 
 Plug 'easymotion/vim-easymotion'
@@ -48,3 +54,5 @@ let mapleader=" "
 nmap <Leader>nt :NERDTreeFind<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 
+" Prettier config
+nmap <C-f> <Plug>(coc-format-selected)<CR>
