@@ -10,3 +10,4 @@ The documetantion is:
 https://github.com/neoclide/coc.nvim
 Afrer your install coc.nvim by Plug-vim
 Install #:CocInstall coc-json coc-tsserver
+And #:CocInstall coc-eslint
