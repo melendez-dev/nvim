@@ -34,12 +34,18 @@ Plug 'mxw/vim-jsx'
 " Plug autocomplete with coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+
 " Status bar
 Plug 'maximbaz/lightline-ale'
 Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 
 
+" Discord
+"Plug 'vimsence/vimsence'
+"Plug 'anned20/vimsence'
+"Plug 'aurieh/discord.nvim'
+Plug 'stoozy/vimcord'
 
 " IDE 
 Plug 'easymotion/vim-easymotion'
@@ -82,6 +88,18 @@ Plug 'mhartington/formatter.nvim'
 
 
 call plug#end()
+"Discord config
+" General options
+let g:vimsence_client_id = '439476230543245312'
+let g:vimsence_small_text = 'NeoVim'
+let g:vimsence_small_image = 'neovim'
+let g:vimsence_editing_details = 'Editing: {}'
+let g:vimsence_editing_state = 'Working on: {}'
+let g:vimsence_file_explorer_text = 'In NERDTree'
+let g:vimsence_file_explorer_details = 'Looking for files'
+"let g:vimsence_custom_icons = {'filetype': 'iconname'}
+
+
 
 " Theme config and vim-rainbow config and mxw/vim-jsx
 colorscheme gruvbox
@@ -94,7 +112,7 @@ let mapleader=" "
 nmap <Leader>nt :NERDTreeFind<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-a> :Copilot panel<CR>
-
+inoremap <silent><expr> <c-space> coc#refresh()
 " Integration Bar | name of the brach
 let g:lightline = {
       \ 'active': {
@@ -115,6 +133,7 @@ let g:closetag_xhtml_filetypes = 'xhtml,jsx,js'
 " xdebug
 let g:vdebug_options = {}
 let g:vdebug_options["port"] = 7000
+
 
 " options format
 let g:PHP_autoformatcomment = 1
